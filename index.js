@@ -4,6 +4,8 @@ const createEcgData = require("./services/firebase/ecg")
 
 const app = express();
 
+const PORT = 5000;
+
 app.get("/", (req, res) => {
   const lowAlpha = Number(req.query.lowalpha);
   const highAlpha = Number(req.query.highalpha);
@@ -18,6 +20,6 @@ app.get("/", (req, res) => {
   res.send("done")
 });
 
-app.listen(10000, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log("Sever is up on port 8000");
 });
