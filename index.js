@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const createEcgData = require("./services/firebase/ecg")
 

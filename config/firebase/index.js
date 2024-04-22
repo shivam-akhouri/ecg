@@ -5,13 +5,16 @@ const { getFirestore }  = require("firebase/firestore");
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log(process.env.APIKEY)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCG6lflj_XIcSgQjwLcoCupWZR1yQQz-00",
-  authDomain: "ecgbrainwave.firebaseapp.com",
-  projectId: "ecgbrainwave",
-  storageBucket: "ecgbrainwave.appspot.com",
-  messagingSenderId: "766401962769",
-  appId: "1:766401962769:web:8252f7a58059a8b80662b0"
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGEID,
+  appId: process.env.APPID
 };
 
 // Initialize Firebase
